@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/GreetingAPI/llama_model/Llama-3.2-3B-Instruct-Q6_K_L.gguf
