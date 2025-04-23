@@ -5,33 +5,31 @@
         Title="AI 問答系統" Height="410" Width="700">
     <Grid Margin="0,0,0,0">
 
-        <!-- 左右區比例 -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- 問答區 -->
         <StackPanel Margin="20,20,20,20" Grid.Column="0">
             <TextBox x:Name="UserInput" FontSize="16" Height="50" Margin="0,0,0,10" MaxLength="100"/>
-            <Button Content="發送訊息" Click="SendMessage" FontSize="16" Height="30" Margin="0,0,0,10"/>
-            <TextBlock x:Name="AiResponse" FontSize="16" TextWrapping="Wrap" 
-                       Text="AI 回應將顯示在這裡" Height="195" Margin="0,0,0,0"/>
+            <Button x:Name="SendButton" Content="發送訊息" Click="SendMessage" FontSize="16" Height="30" Margin="0,0,0,10"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="195">
+                <TextBlock x:Name="AiResponse" FontSize="16" TextWrapping="Wrap"
+                           Text="AI 回應將顯示在這裡..." Margin="0,0,0,0"/>
+            </ScrollViewer>
         </StackPanel>
 
-        <!-- 歷史紀錄區 -->
         <StackPanel Grid.Column="1" Margin="10">
             <TextBlock Text="歷史紀錄" FontSize="18" FontWeight="Bold"/>
-            <ListBox x:Name="HistoryList" Height="280" Margin="2,5,0,0" 
+            <ListBox x:Name="HistoryList" Height="280" Margin="2,5,0,0"
                      ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <!-- 直接綁定 DisplayText 屬性 -->
-                        <TextBlock Text="{Binding DisplayText}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" MaxHeight="20"/>
+                        <TextBlock Text="{Binding DisplayText}" TextWrapping="NoWrap" ToolTip="{Binding DisplayText}" TextTrimming="CharacterEllipsis" MaxHeight="20"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Button Content="刪除選取紀錄" Click="DeleteHistory" FontSize="14" Height="30" Margin="2,5,0,0"/>
+            <Button x:Name="DeleteButton" Content="刪除選取紀錄" Click="DeleteHistory" FontSize="14" Height="30" Margin="2,5,0,0"/>
         </StackPanel>
     </Grid>
 </Window>
