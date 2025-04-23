@@ -1,5 +1,6 @@
 # AI-Chat-Demo
-### 透過本地Llama模型實現AI問答
+### 透過 WPF + ASP.NET Core Web API 實作 AI 問答介面
+(使用本地 Llama 模型)
 - Demo重點: MVC概念實作、RESTful API 傳遞、MySQL資料庫連接
 ---
 - 撰寫語言: C#  
