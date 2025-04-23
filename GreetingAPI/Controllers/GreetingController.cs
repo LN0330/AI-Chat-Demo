@@ -11,7 +11,8 @@ public class GreetingController : ControllerBase
     // 模型執行檔路徑與資料庫連線字串
     private static readonly string LlamaCliPath = Path.Combine(Directory.GetCurrentDirectory(), "llama_model\\llama.cpp\\build\\bin\\Release", "llama-cli.exe");
     private static readonly string ModelPath = Path.Combine(Directory.GetCurrentDirectory(), "llama_model", "Llama-3.2-3B-Instruct-Q6_K_L.gguf");
-    private readonly string connectionString = "server=localhost;database=chat_history;user=root;password=!QAZ2wsx1234";
+    // 請自行編輯DB密碼
+    private readonly string connectionString = "server=localhost;database=chat_history;user=root;password=!QAZ2wsx1234";    
 
     [HttpPost("ask-ai")]
     // 使用 AskAIRequest 模型接收請求，回傳處理後的字串
