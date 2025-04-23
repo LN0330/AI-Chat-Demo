@@ -1,6 +1,6 @@
 # AI-Chat-Demo
 ### 透過本地Llama模型實現AI問答
-- Demo重點: MVC概念實作、API調用、MySQL資料庫連接、正規化
+- Demo重點: MVC概念實作、RESTful API 傳遞、MySQL資料庫連接
 ---
 - 撰寫語言: C#  
 - 架構: ASP.NET Core、WPF Application、MySQL
