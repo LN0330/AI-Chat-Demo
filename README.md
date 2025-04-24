@@ -9,4 +9,4 @@
 ---  
 - 示意圖:  
 ![image](https://github.com/LN0330/AI-Chat-Demo/blob/master/Gif/Gif_1.gif)
-![image](https://github.com/LN0330/AI-Chat-Demo/blob/master/Gif/Png_1.png)  
+![image](https://github.com/LN0330/AI-Chat-Demo/blob/master/Gif/01.png)  
